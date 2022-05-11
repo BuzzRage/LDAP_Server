@@ -1,0 +1,159 @@
+dn: dc=anorlondo,dc=org
+objectclass: dcObject
+objectclass: organization
+dc: anorlondo
+o: Organigramme d'Anor Londo 
+
+dn: ou=people,dc=anorlondo,dc=org
+objectclass: organizationalUnit
+ou: people
+
+dn: sn=seath,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Seath l'écorché
+description: Archiviste
+mail: seath@anorlondo.org
+sn: seath
+userPassword:: e1NTSEF9MUVJbHZTM0FWanlwdStyU1V6K21COU1aWXBOMWR1bEE=
+
+dn: sn=gwen,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Gwen le seigneur des cendres
+description: Actionnaire majoritaire
+mail: gwen@anorlondo.org
+sn: gwen
+userPassword:: e1NTSEF9MUVJbHZTM0FWanlwdStyU1V6K21COU1aWXBOMWR1bEE=
+
+dn: sn=gwenevere,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Gwenevere la reine solaire
+description: Directrice des Ressources Humaines
+mail: gwenevere@anorlondo.org
+sn: gwenevere
+userPassword:: e1NTSEF9MW9HUDA1N2sxbXRwY0NEMmN0NW1laXdyeElLSi9kNko=
+
+dn: sn=gwendolin,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Gwendolin le soleil noir
+mail: gwendolin@anorlondo.org
+sn: gwendolin
+userPassword:: e1NTSEF9WU8rY3JYY2NidzY5cGphTm9oZnhIZG9SOEZGYS8rai8=
+
+dn: sn=andre,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: André le forgeron
+description: Stagiaire
+mail: andre@anorlondo.org
+sn: andre
+userPassword:: e1NTSEF9WXhRYlZjU2MvYU9qSUZlbFI2NDlWUUR1N012WXJrTFM=
+
+dn: sn=nito,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Nito le premier d'entre les morts
+description: Administrateur de la mort
+mail: nito@anorlondo.org
+sn: nito
+userPassword:: e1NTSEF9MUVJbHZTM0FWanlwdStyU1V6K21COU1aWXBOMWR1bEE=
+
+dn: sn=izalith,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: La sorcière d'Izalith
+mail: izalith@anorlondo.org
+sn: izalith
+userPassword:: e1NTSEF9WU8rY3JYY2NidzY5cGphTm9oZnhIZG9SOEZGYS8rai8=
+
+dn: sn=quelaan,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Quelaan la maîtresse du chaos
+description: Directrice du pôle financier
+mail: quelaan@anorlondo.org
+sn: quelaan
+userPassword:: e1NTSEF9MUVJbHZTM0FWanlwdStyU1V6K21COU1aWXBOMWR1bEE=
+
+dn: sn=quelaag,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Quelaag la gardienne de l'Éveil
+mail: quelaag@anorlondo.org
+sn: quelaag
+userPassword:: e1NTSEF9MW9HUDA1N2sxbXRwY0NEMmN0NW1laXdyeElLSi9kNko=
+
+dn: sn=quelana,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Quelana la grande pyromancienne
+mail: quelana@anorlondo.org
+sn: quelana
+userPassword:: e1NTSEF9WXhRYlZjU2MvYU9qSUZlbFI2NDlWUUR1N012WXJrTFM=
+
+dn: sn=pat,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Pat la hyène
+description: Directeur commercial
+mail: pat@anorlondo.org
+sn: pat
+userPassword:: e1NTSEF9WXhRYlZjU2MvYU9qSUZlbFI2NDlWUUR1N012WXJrTFM=
+
+dn: sn=artorias,ou=people,dc=anorlondo,dc=org
+objectclass: inetOrgPerson
+cn: Sire Artorias
+mail: artorias@anorlondo.org
+sn: artorias
+userPassword:: e3NoYX01ZW42RzZNZXpScm9UM1hLcWtkUE9tWS9CZlE9
+
+dn: ou=classes,dc=anorlondo,dc=org
+objectclass: organizationalUnit
+ou: classes
+
+dn: cn=chaos,ou=classes,dc=anorlondo,dc=org
+objectclass: groupOfUniqueNames
+cn: chaos
+uniqueMember: sn=quelaag,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=quelaan,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=quelana,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=izalith,ou=people,dc=anorlondo,dc=org
+
+dn: cn=lords,ou=classes,dc=anorlondo,dc=org
+objectclass: groupOfUniqueNames
+cn: lords
+uniqueMember: sn=nito,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=gwen,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=izalith,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=artorias,ou=people,dc=anorlondo,dc=org
+
+dn: cn=humain,ou=classes,dc=anorlondo,dc=org
+objectclass: groupOfUniqueNames
+cn: humain
+uniqueMember: sn=quelana,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=andre,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=pat,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=gwendolin,ou=people,dc=anorlondo,dc=org
+
+dn: cn=dragon,ou=classes,dc=anorlondo,dc=org
+objectclass: groupOfUniqueNames
+cn: dragon
+uniqueMember: sn=seath,ou=people,dc=anorlondo,dc=org
+uniqueMember: sn=seath,ou=people,dc=anorlondo,dc=org
+
+dn: ou=roles,dc=anorlondo,dc=org
+objectclass: organizationalUnit
+ou: roles
+
+dn: cn=manager,ou=roles,dc=anorlondo,dc=org
+objectclass: organizationalRole
+cn: manager
+roleOccupant: sn=gwen,ou=people,dc=anorlondo,dc=org
+roleOccupant: sn=gwenevere,ou=people,dc=anorlondo,dc=org
+
+dn: cn=magicien,ou=roles,dc=anorlondo,dc=org
+objectclass: organizationalRole
+cn: magicien
+roleOccupant: sn=seath,ou=people,dc=anorlondo,dc=org
+roleOccupant: sn=quelana,ou=people,dc=anorlondo,dc=org
+roleOccupant: sn=izalith,ou=people,dc=anorlondo,dc=org
+roleOccupant: sn=gwendolin,ou=people,dc=anorlondo,dc=org
+
+dn: cn=civil,ou=roles,dc=anorlondo,dc=org
+objectclass: organizationalRole
+cn: civil
+roleOccupant: sn=pat,ou=people,dc=anorlondo,dc=org
+roleOccupant: sn=andre,ou=people,dc=anorlondo,dc=org
+

@@ -29,7 +29,7 @@ Pour éviter les erreurs, il est conseillé de copier le résultat dans un fichi
 7. Recherche simple pour voir la base de donnée actuelle
     `ldapsearch -Y EXTERNAL -H ldapi:/// -b cn=config olcDatabase=\*`
     
-8. Ajout du fichier `olcSuffix.ldif` (cela va remplacer le `olcSuffix` et le `olcRootDN` par défaut pour mettre `dc=anorlondo,dc=org` pour `olcSuffix` et `cn=admin,dc=musicschool,dc=fr` pour `olcRootDN`)
+8. Ajout du fichier `olcSuffix.ldif` (cela va remplacer le `olcSuffix` et le `olcRootDN` par défaut pour mettre `dc=anorlondo,dc=org` pour `olcSuffix` et `cn=admin,dc=anorlondo,dc=org` pour `olcRootDN`)
     `ldapmodify -Y EXTERNAL -H ldapi:/// -f olcSuffix.ldif`
     
 9. Ajout du fichier `olcRootPW.ldif` (cela va ajouter le hash du mot de passe administrateur dans la base)

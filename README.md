@@ -59,13 +59,11 @@ Doc officielle d'OpenLDAP: https://openldap.org/doc/admin24/index.html
     
 9. À ce stade on doit pouvoir faire des recherches sur son propre serveur LDAP avec `ldapsearch` ! Félicitation. Pour accéder à votre serveur depuis un client extérieur, il faut penser à demander au pare-feu d'ouvrir les ports utilisés par le service d'annuaire:
     
-    9.1 Avec `firewall-cmd`
+    9.1 Avec `firewall-cmd`:
     
-        9.1.1 `firewall-cmd --add-service=ldap --permanent`
-
-        9.1.2 `firewall-cmd --add-port=389/tcp --permanent`
-
-        9.1.3 `firewall-cmd --reload`
+        firewall-cmd --add-service=ldap --permanent
+        firewall-cmd --add-port=389/tcp --permanent
+        firewall-cmd --reload
     
     9.2. Si le parefeu est `ufw` c'est la commande suivante qu'il faut lancer: `ufw allow 389` (on peut vérifier avec `ufw status`)
 

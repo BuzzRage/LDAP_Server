@@ -1,4 +1,0 @@
-dn: olcDatabase={2}hdb,cn=config
-changetype: modify
-add: olcRootPW
-olcRootPW: {SSHA}+UEFAzQyXhGpYNI+YVgGlyf/XyV4ZmLu

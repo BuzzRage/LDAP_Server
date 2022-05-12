@@ -131,7 +131,6 @@ dn: cn=dragon,ou=classes,dc=anorlondo,dc=org
 objectclass: groupOfUniqueNames
 cn: dragon
 uniqueMember: sn=seath,ou=people,dc=anorlondo,dc=org
-uniqueMember: sn=seath,ou=people,dc=anorlondo,dc=org
 
 dn: ou=roles,dc=anorlondo,dc=org
 objectclass: organizationalUnit

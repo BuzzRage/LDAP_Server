@@ -43,29 +43,21 @@ Doc officielle d'OpenLDAP: https://openldap.org/doc/admin24/index.html
 6. Pour tester la configuration: il faut vérifier que tout correspond en répétant l'étape 3 et lancer:
     `slaptest -u`
     
-7. Ajouter si besoin les schémas de base `cosine`, `nis` et `inetorgperson`
-    
-    7.1 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/cosine.ldif`
-    
-    7.2 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/nis.ldif`
-    
-    7.3 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/inetorgperson.ldif`
-    
-8. Ajouter la base de donnée `data.ldif` (disponible dans ce repo) (le mot de passe du compte admin LDAP sera demandé)
+7. Ajouter la base de donnée `data.ldif` (disponible dans ce repo) (le mot de passe du compte admin LDAP sera demandé)
     `ldapadd -f data.ldif -D cn=admin,dc=anorlondo,dc=org -W`
 
-14bis. Si erreur, il faut relancer le service LDAP (si ça ne marche toujours pas, il faut la configuration et relancer la commande de l'étape 14 en ajoutant l'option -c)
+7bis. Si erreur, il faut relancer le service LDAP (si ça ne marche toujours pas, il faut la configuration et relancer la commande de l'étape 14 en ajoutant l'option -c)
     `systemctl restart slapd`
     
-9. À ce stade on doit pouvoir faire des recherches sur son propre serveur LDAP avec `ldapsearch` ! Félicitation. Pour accéder à votre serveur depuis un client extérieur, il faut penser à demander au pare-feu d'ouvrir les ports utilisés par le service d'annuaire:
+8. À ce stade on doit pouvoir faire des recherches sur son propre serveur LDAP avec `ldapsearch` ! Félicitation. Pour accéder à votre serveur depuis un client extérieur, il faut penser à demander au pare-feu d'ouvrir les ports utilisés par le service d'annuaire:
     
-    9.1 Avec `firewall-cmd`:
+    8.1 Avec `firewall-cmd`:
     
         firewall-cmd --add-service=ldap --permanent
         firewall-cmd --add-port=389/tcp --permanent
         firewall-cmd --reload
     
-    9.2. Si le parefeu est `ufw` c'est la commande suivante qu'il faut lancer: `ufw allow 389` (on peut vérifier avec `ufw status`)
+    8.2. Si le parefeu est `ufw` c'est la commande suivante qu'il faut lancer: `ufw allow 389` (on peut vérifier avec `ufw status`)
 
 
-10. Ensuite on peut configurer un client LDAP (cela peut être une application dédiée de carnet d'adresse comme KAddressBook sous KDE, ou cela peut être intégré dans un module dans un client de mail comme `thunderbird`)
+9. Ensuite on peut configurer un client LDAP (cela peut être une application dédiée de carnet d'adresse comme KAddressBook sous KDE, ou cela peut être intégré dans un module dans un client de mail comme `thunderbird`)

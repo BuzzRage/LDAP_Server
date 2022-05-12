@@ -45,11 +45,11 @@ Doc officielle d'OpenLDAP: https://openldap.org/doc/admin24/index.html
     
 7. Ajouter si besoin les schémas de base `cosine`, `nis` et `inetorgperson`
     
-    7.1 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif`
+    7.1 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/cosine.ldif`
     
-    7.2 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif`
+    7.2 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/nis.ldif`
     
-    7.3 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif`
+    7.3 `ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/inetorgperson.ldif`
     
 8. Ajouter la base de donnée `data.ldif` (disponible dans ce repo) (le mot de passe du compte admin LDAP sera demandé)
     `ldapadd -f data.ldif -D cn=admin,dc=anorlondo,dc=org -W`
